@@ -29,3 +29,5 @@ terraform apply
 
 
 ## refarence
+
+- [unfunco/oidc-github/aws | Terraform Registry](https://registry.terraform.io/modules/unfunco/oidc-github/aws/1.8.0)
