@@ -27,7 +27,7 @@ terraform apply -target=module.oidc_github
 - Lambdaを作成する
 
 ```bash
-
+terraform apply
 ```
 
 
