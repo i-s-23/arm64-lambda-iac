@@ -1,0 +1,27 @@
+{
+	"name": "arm64 lambda iac",
+	"image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/terraform": {},
+		"ghcr.io/devcontainers/features/aws-cli": {}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true,
+				"terraform.languageServer.args": [
+					"serve"
+				],
+				"[terraform]": {
+					"editor.defaultFormatter": "hashicorp.terraform"
+				},
+			},
+			"extensions": [
+				"hashicorp.terraform",
+				"github.vscode-github-actions"
+			]
+		},
+	}
+
+}
