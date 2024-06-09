@@ -5,7 +5,7 @@ ECR+Lambdaを作成するTerraformのコードです。
 ## content
 
 - zipだけでなくimage形式やArmアーキテクチャ使用可能などを変数にしてある
-- `./src/*` にimage形式で使用するDockerfileとソースコードを配置してあり、コードが修正されるとCICDからDocker Build＆Pushが行われる
+- `./src/lambda-test/*` にimage形式で使用するDockerfileとソースコードを配置してあり、コードが修正されるとCICDからDocker Build＆Pushが行われる
 
 ## Usae
 
@@ -19,10 +19,6 @@ terraform apply -target=module.oidc_github
 
 - ECRにDockerイメージをPushする
   - CICDを実行すれば自動でPushされる
-
-```bash
-
-```
 
 - Lambdaを作成する
 
