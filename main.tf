@@ -44,6 +44,23 @@ resource "aws_iam_policy" "ecr_push_policy" {
   })
 }
 
+resource "aws_iam_policy" "lambda_update" {
+  name = "lambda_update"
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        "Effect" : "Allow",
+        "Action" : [
+          "lambda:UpdateFunctionCode",
+        ],
+        "Resource" : ["arn:aws:lambda:${local.region}:${local.account_id}:function:${var.function_name}"]
+      }
+    ]
+  })
+}
+
 module "oidc_github" {
   source  = "unfunco/oidc-github/aws"
   version = "1.8.0"
@@ -54,6 +71,7 @@ module "oidc_github" {
     "${var.github_organization}/${var.github_repository}"
   ]
   iam_role_policy_arns = [
-    aws_iam_policy.ecr_push_policy.arn
+    aws_iam_policy.ecr_push_policy.arn,
+    aws_iam_policy.lambda_update.arn
   ]
 }
