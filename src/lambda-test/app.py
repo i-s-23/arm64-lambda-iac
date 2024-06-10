@@ -8,7 +8,7 @@ def lambda_handler(event, context) -> str:
         context (_type_): _description_
 
     Returns:
-        _type_: _description_
+        str: 設定した環境変数を返す
     """
 
     env_value: str = os.getenv("TEST", "")
