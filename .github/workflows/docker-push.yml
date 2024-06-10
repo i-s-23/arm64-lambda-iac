@@ -9,7 +9,8 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04-arm64 # CICD料金を下げるためarm64のlerger-runnerを使用
+    runs-on: ubuntu-latest
+    # runs-on: ubuntu-22.04-arm64 # CICD料金を下げるためarm64のlerger-runnerを使用
     permissions:
       id-token: write
       contents: read

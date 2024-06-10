@@ -1,5 +1,4 @@
 cffi==1.16.0
-cryptography==42.0.7
 pycparser==2.22
 setuptools==70.0.0
 wheel==0.43.0
