@@ -63,7 +63,7 @@ resource "aws_iam_policy" "lambda_update" {
 
 module "oidc_github" {
   source  = "unfunco/oidc-github/aws"
-  version = "2.0.1"
+  version = "2.0.2"
 
   iam_role_name = "github_oidc_role"
 
